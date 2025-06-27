@@ -29,6 +29,8 @@ export default function Home() {
     mynamefortitle = "zoe";
     extrausernamecontent = " (yeah, deadname sadly. happens when you're not out to everyone :3)";
     myemail = "zoe@negrenavarro.me"
+    mypronouns = "she/they";
+    myname = "Zoe";
     basecolor = "text-rose-300";
     myexpression = ":3";
   }
@@ -113,6 +115,7 @@ export default function Home() {
           <div className="text-xl font-bold cursor-default">about://{mynamefortitle}</div>
           <div className="flex gap-8 text-sm">
             <a id="home" href="#" className={`hover:${basecolor} transition-colors ${basecolor}`}>Home</a>
+            <a href={`/about${queryString}`} className={`hover:${basecolor} transition-colors`}>About</a>
             <a href={`/blog${queryString}`} className={`hover:${basecolor} transition-colors`}>Blog</a>
             <a href={`/network${queryString}`} className={`hover:${basecolor} transition-colors`}>Network</a>
             <a href="#" className={`hover:${basecolor} transition-colors`}>???</a>
