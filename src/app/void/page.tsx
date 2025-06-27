@@ -62,8 +62,8 @@ export default function Void() {
   let mynamefortitle = "dan";
   let myexpression = ":D";
   let dice = (<></>);
-  
-  let currentdomain = "pluraldan.link";
+
+  let currentdomain = "negrenavarro.me";
   if (typeof window !== "undefined") {
     currentdomain = window.location.hostname;
   }
@@ -80,17 +80,6 @@ export default function Void() {
     const randomIndex = Math.floor(Math.random() * voidContent.length);
     setCurrentContent(voidContent[randomIndex]);
   }, []);
-
-  if (currentContent.content.includes("Roll the dice")) {
-    dice = (
-        <div className="text-center">
-          <a href="https://noise.pluraldan.link/"className="mt-4 text-red-400 font-mono animate-bounce cursor-pointer">
-            Click to seal your fate.
-          </a>
-        </div>
-
-    );
-  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">

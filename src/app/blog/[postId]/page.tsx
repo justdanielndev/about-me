@@ -21,10 +21,10 @@ export default async function BlogPost({ params, searchParams }: BlogPageProps) 
     let basecolor = "text-blue-300";
     let mynamefortitle = "dan";
     let extrausernamecontent = "";
-    let myemail = "dan@pluraldan.link";
+    let myemail = "daniel@negrenavarro.me";
     let myexpression = ":D"
 
-    let currentdomain = "pluraldan.link"
+    let currentdomain = "negrenavarro.me"
     if (typeof window !== "undefined") {
         currentdomain = window.location.hostname;
     }

@@ -9,6 +9,7 @@ export interface NetworkItem {
   description: string;
   content: string;
   type: string;
+  order: string;
 }
 
 const networkDirectory = path.join(process.cwd(), 'src/content/network');
@@ -34,10 +35,11 @@ export function getAllNetworkItems(): NetworkItem[] {
         description: data.description || '',
         content,
         type: data.type || '???',
+        order: data.order || '0',
       };
     });
 
-  return allNetworkItems.sort((a, b) => (a.title > b.title ? 1 : -1));
+  return allNetworkItems.sort((a, b) => (a.order > b.order ? 1 : -1));
 }
 
 export function getNetworkItemById(id: string): NetworkItem | null {

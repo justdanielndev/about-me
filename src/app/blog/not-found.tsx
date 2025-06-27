@@ -13,7 +13,7 @@ export default function BlogNotFound() {
   let mynamefortitle = "dan";
   let myexpression = ":D";
   
-  let currentdomain = "pluraldan.link"
+  let currentdomain = "negrenavarro.me"
   if (typeof window !== "undefined") {
     currentdomain = window.location.hostname;
   }

@@ -16,9 +16,9 @@ export default function Home() {
   let mynamefortitle = "dan";
   let mypronouns = "they/he";
   let extrausernamecontent = "";
-  let myemail = "dan@pluraldan.link";
+  let myemail = "daniel@negrenavarro.me";
   let myexpression = ":D"
-  let currentdomain = "pluraldan.link"
+  let currentdomain = "negrenavarro.me"
   if (typeof window !== "undefined") {
     currentdomain = window.location.hostname;
   }
@@ -34,7 +34,7 @@ export default function Home() {
     basecolor = "text-rose-300";
     myexpression = ":3";
   }
-  let thisurl = "https://pluraldan.link";
+  let thisurl = "https://negrenavarro.me";
   useEffect(() => {
     const fetchLatestPost = async () => {
       try {
