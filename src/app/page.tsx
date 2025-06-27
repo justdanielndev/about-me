@@ -1,6 +1,7 @@
 'use client';
 import { useSearchParams } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
+import HomeNavigation from '@/components/HomeNavigation';
 
 function HomeContent() {
   const searchParams = useSearchParams();
@@ -10,7 +11,6 @@ function HomeContent() {
   
   const queryString = truename ? `?truename=${truename}` : '';
 
-  let timeshomehovered = 0;
   let basecolor = "text-blue-300";
   let myname = "Dan";
   let mynamefortitle = "dan";
@@ -61,67 +61,15 @@ function HomeContent() {
 
   if (typeof window !== "undefined") {
     thisurl = window.location.href;
-    const homeTextElement = document.getElementById("home");
-    const updateHomeText = () => {
-      if (!homeTextElement) return;
-      if (timeshomehovered === 0) {
-        homeTextElement.innerHTML = "You're... already here.";
-      } else if (timeshomehovered === 1) {
-        homeTextElement.innerHTML = "Seriously, you're already here.";
-      } else if (timeshomehovered === 2) {
-        homeTextElement.innerHTML = "Again?";
-      } else if (timeshomehovered === 3) {
-        homeTextElement.innerHTML = "I'll tear your soul apart " + myexpression + " (/j)";
-      } else if (timeshomehovered === 4) {
-        homeTextElement.innerHTML = "Why are you still hovering?";
-      } else if (timeshomehovered === 5) {
-        homeTextElement.innerHTML = "A̵̛̱̞͓̝̣̖̜̫̪̰̙͙͉̩̭̪̿̇̿̾̌̎̉̇̐̀͗̌́̇̑̍̀̓̑͒̕͝͠͠Á̷̧̡̛̹̓͊̏̓̓́̅͐̓̌̄̾̌̿̀̈́̒̌̇͊̍̎͆̂̚A̶̲̔̓̋̍̎͊̈́͂̓̅́́͐͆̌̾̎̊̅͘̕͝Ǎ̴̢̡̢̤̖̪͔̤̥̺͙̦̮͉̹̖̗̣̀̈́̿͑̅̀̈̉̇̊̊̌A̴̧̡͚̼̘̤̙̝̮̟͈̯̖̯͉̖͍̗̺̤̩͇̞͇̜̱̓͌͂̍̄͊́̆̿̀͌̈́̒͗́̎̐̏̀̓̀̃̑͌͘̕͜͝A̴̩͍̭͊͂̈́͐̑̾̾̾̾̐̅̀̽͛̓͝A̶̢̢̡̢̛̱̰̭̘͖̳̮̰̩̘̯̺͎̟̻̲̙̫̬̙̜̙̍͒͋͂͑̈̾̏̀̏̐̉̓̈́̍̓̚̚͜͝ͅÄ̸̧̨͔͇͖̳͍̭̻͉͈̻̥́̏̃̅̑̀͂͝Ä̸̛̛̺́̾͑̐̈́̐̕Ą̷̢̧̛̞̭͈͈̝͔͕̼̩̣̞̮͈̺͎̘͉̺̭͓͍̰̝̜̈́̅̀̇͛̍̽̌͌̐̔͂̃̌̏̎̋̅̐͗͜͝";
-      } else if (timeshomehovered === 6) {
-        homeTextElement.innerHTML = "I can see you.";
-      } else if (timeshomehovered === 7) {
-        homeTextElement.innerHTML = "Ok, I give up.";
-      } else if (timeshomehovered === 8) {
-        homeTextElement.innerHTML = "Do you have nothing else to do?";
-      } else if (timeshomehovered === 9) {
-        homeTextElement.innerHTML = "Go read or something.";
-      } else if (timeshomehovered === 10) {
-        homeTextElement.innerHTML = "Seriously?";
-      } else if (timeshomehovered === 11) {
-        homeTextElement.innerHTML = "Johan and you would be good friends";
-      } else if (timeshomehovered === 12) {
-        homeTextElement.innerHTML = "He... I don't know if he's even alive anymore.";
-      } else if (timeshomehovered <= 17) {
-        homeTextElement.innerHTML = "...";
-      } else if (timeshomehovered >= 18) {
-        window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
-      }
-    };
-    homeTextElement?.addEventListener("mouseover", () => {
-      updateHomeText();
-      timeshomehovered++;
-    });
-    homeTextElement?.addEventListener("mouseout", () => {
-      homeTextElement.innerHTML = "Home";
-    });
-    homeTextElement?.addEventListener("click", () => {
-      updateHomeText();
-      timeshomehovered++;
-    });
   }
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <header className="px-8 py-6">
-        <nav className="flex justify-between items-center max-w-6xl mx-auto">
-          <div className="text-xl font-bold cursor-default">about://{mynamefortitle}</div>
-          <div className="flex gap-8 text-sm">
-            <a id="home" href="#" className={`hover:${basecolor} transition-colors ${basecolor}`}>Home</a>
-            <a href={`/about${queryString}`} className={`hover:${basecolor} transition-colors`}>About</a>
-            <a href={`/blog${queryString}`} className={`hover:${basecolor} transition-colors`}>Blog</a>
-            <a href={`/network${queryString}`} className={`hover:${basecolor} transition-colors`}>Network</a>
-            <a href={`/void${queryString}`} className={`hover:${basecolor} transition-colors`}>???</a>
-          </div>
-        </nav>
-      </header>
+      <HomeNavigation 
+        mynamefortitle={mynamefortitle}
+        basecolor={basecolor}
+        queryString={queryString}
+        myexpression={myexpression}
+      />
 
       <main className="px-8 py-12 max-w-4xl mx-auto">
         <section className="mb-12">
@@ -139,7 +87,7 @@ function HomeContent() {
           <p className="mb-4">Might sound like some sort of TV show, but it's just where I show my latest stuff (blog posts, projects...):</p>
           
           <div className="bg-gray-900/50">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-center border border-gray-600 rounded-lg p-4">
               <div>
                 <h3 className="font-bold">CURRENT PROJECT</h3>

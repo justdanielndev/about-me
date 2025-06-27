@@ -1,4 +1,5 @@
 import { getAllPosts } from '@/lib/blog';
+import Navigation from '@/components/Navigation';
 
 interface BlogPageProps {
   searchParams: Promise<{ truename?: string }>;
@@ -30,18 +31,12 @@ export default async function Blog({ searchParams }: BlogPageProps) {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <header className="px-8 py-6">
-        <nav className="flex justify-between items-center max-w-6xl mx-auto">
-          <a href={`/${queryString}`} className="text-xl font-bold">about://{mynamefortitle}</a>
-          <div className="flex gap-8 text-sm">
-            <a href={`/${queryString}`} className={`hover:${basecolor} transition-colors`}>Home</a>
-            <a href={`/about${queryString}`} className={`hover:${basecolor} transition-colors`}>About</a>
-            <a href={`#${queryString}`} className={`hover:${basecolor} transition-colors ${basecolor}`}>Blog</a>
-            <a href={`/network${queryString}`} className={`hover:${basecolor} transition-colors`}>Network</a>
-            <a href={`/void${queryString}`} className={`hover:${basecolor} transition-colors`}>???</a>
-          </div>
-        </nav>
-      </header>
+      <Navigation 
+        mynamefortitle={mynamefortitle}
+        basecolor={basecolor}
+        queryString={queryString}
+        currentPage="blog"
+      />
 
       <main className="px-8 py-12 max-w-4xl mx-auto">
         <section className="mb-12">

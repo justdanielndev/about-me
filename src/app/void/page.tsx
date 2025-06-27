@@ -2,6 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState, Suspense } from 'react';
+import Navigation from '@/components/Navigation';
 
 const voidContent = [
   {
@@ -83,18 +84,12 @@ function VoidContent() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <header className="px-8 py-6">
-        <nav className="flex justify-between items-center max-w-6xl mx-auto">
-          <a href={`/${queryString}`} className="text-xl font-bold">about://{mynamefortitle}</a>
-          <div className="flex gap-8 text-sm">
-            <a href={`/${queryString}`} className={`hover:${basecolor} transition-colors`}>Home</a>
-            <a href={`/about${queryString}`} className={`hover:${basecolor} transition-colors`}>About</a>
-            <a href={`/blog${queryString}`} className={`hover:${basecolor} transition-colors`}>Blog</a>
-            <a href={`/network${queryString}`} className={`hover:${basecolor} transition-colors`}>Network</a>
-            <a href={`/void${queryString}`} className={`hover:${basecolor} transition-colors ${basecolor}`}>???</a>
-          </div>
-        </nav>
-      </header>
+      <Navigation 
+        mynamefortitle={mynamefortitle}
+        basecolor={basecolor}
+        queryString={queryString}
+        currentPage="void"
+      />
 
       <main className="px-8 py-12 max-w-4xl mx-auto">
         <div className="text-center py-12">

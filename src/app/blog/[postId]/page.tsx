@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getPostBySlug } from '@/lib/blog';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import Navigation from '@/components/Navigation';
 
 interface BlogPageProps {
     params: Promise<{ postId: string }>;
@@ -35,18 +36,12 @@ export default async function BlogPost({ params, searchParams }: BlogPageProps) 
 
     return (
         <div className="min-h-screen bg-gray-900 text-white">
-            <header className="px-8 py-6">
-                <nav className="flex justify-between items-center max-w-6xl mx-auto">
-                    <a href={`/${queryString}`} className="text-xl font-bold">about://{mynamefortitle}</a>
-                    <div className="flex gap-8 text-sm">
-                        <a href={`/${queryString}`} className={`hover:${basecolor} transition-colors`}>Home</a>
-                        <a href={`/about${queryString}`} className={`hover:${basecolor} transition-colors`}>About</a>
-                        <a href={`/blog${queryString}`} className={`hover:${basecolor} transition-colors`}>Blog</a>
-                        <a href={`/network${queryString}`} className={`hover:${basecolor} transition-colors`}>Network</a>
-                        <a href={`/void${queryString}`} className={`hover:${basecolor} transition-colors`}>???</a>
-                    </div>
-                </nav>
-            </header>
+            <Navigation 
+                mynamefortitle={mynamefortitle}
+                basecolor={basecolor}
+                queryString={queryString}
+                currentPage="blog"
+            />
 
             <main className="px-8 py-12 max-w-4xl mx-auto">
                 <nav className="mb-8">

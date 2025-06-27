@@ -1,4 +1,5 @@
 import { getAllNetworkItems } from '@/lib/network';
+import Navigation from '@/components/Navigation';
 
 interface NetworkPageProps {
   searchParams: Promise<{ truename?: string }>;
@@ -28,18 +29,12 @@ export default async function Network({ searchParams }: NetworkPageProps) {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <header className="px-8 py-6">
-        <nav className="flex justify-between items-center max-w-6xl mx-auto">
-          <a href={`/${queryString}`} className="text-xl font-bold">about://{mynamefortitle}</a>
-          <div className="flex gap-8 text-sm">
-            <a href={`/${queryString}`} className={`hover:${basecolor} transition-colors`}>Home</a>
-            <a href={`/about${queryString}`} className={`hover:${basecolor} transition-colors`}>About</a>
-            <a href={`/blog${queryString}`} className={`hover:${basecolor} transition-colors`}>Blog</a>
-            <a href={`#${queryString}`} className={`hover:${basecolor} transition-colors ${basecolor}`}>Network</a>
-            <a href={`/void${queryString}`} className={`hover:${basecolor} transition-colors`}>???</a>
-          </div>
-        </nav>
-      </header>
+      <Navigation 
+        mynamefortitle={mynamefortitle}
+        basecolor={basecolor}
+        queryString={queryString}
+        currentPage="network"
+      />
 
       <main className="px-8 py-12 max-w-4xl mx-auto">
         <section className="mb-12">
@@ -50,7 +45,7 @@ export default async function Network({ searchParams }: NetworkPageProps) {
         </section>
 
         <section>
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {items.map((item) => (
                 <article key={item.id} className="border border-gray-600 rounded-lg p-6 hover:border-gray-500 transition-colors">
                   <header className="mb-4">
