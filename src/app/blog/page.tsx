@@ -12,8 +12,6 @@ export default async function Blog({ searchParams }: BlogPageProps) {
 
   let basecolor = "text-blue-300";
   let mynamefortitle = "dan";
-  let extrausernamecontent = "";
-  let myemail = "daniel@negrenavarro.me";
   let myexpression = ":D"
 
   let currentdomain = "negrenavarro.me"
@@ -25,8 +23,6 @@ export default async function Blog({ searchParams }: BlogPageProps) {
   }
   if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me") {
     mynamefortitle = "zoe";
-    extrausernamecontent = " (yeah, deadname sadly. happens when you're not out to everyone :3)";
-    myemail = "zoe@negrenavarro.me"
     basecolor = "text-rose-300";
     myexpression = ":3";
   }
