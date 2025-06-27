@@ -1,7 +1,7 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 
 const voidContent = [
   {
@@ -51,7 +51,7 @@ const voidContent = [
   }
 ];
 
-export default function Void() {
+function VoidContent() {
   const searchParams = useSearchParams();
   const truename = searchParams.get('truename');
   const [currentContent, setCurrentContent] = useState(voidContent[0]);
@@ -105,5 +105,13 @@ export default function Void() {
         {dice}
       </main>
     </div>
+  );
+}
+
+export default function Void() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">Loading...</div>}>
+      <VoidContent />
+    </Suspense>
   );
 }

@@ -1,8 +1,9 @@
 'use client';
 
 import { useSearchParams, usePathname } from 'next/navigation';
+import { Suspense } from 'react';
 
-export default function BlogNotFound() {
+function BlogNotFoundContent() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const truename = searchParams.get('truename');
@@ -75,5 +76,13 @@ export default function BlogNotFound() {
         </div>
       </main>
     </div>
+  );
+}
+
+export default function BlogNotFound() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">Loading...</div>}>
+      <BlogNotFoundContent />
+    </Suspense>
   );
 }

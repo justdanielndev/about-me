@@ -1,7 +1,8 @@
 'use client';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
-export default function About() {
+function AboutContent() {
     const searchParams = useSearchParams();
     const truename = searchParams.get('truename');
 
@@ -83,5 +84,13 @@ export default function About() {
                 </section>
             </main>
         </div>
+    );
+}
+
+export default function About() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">Loading...</div>}>
+            <AboutContent />
+        </Suspense>
     );
 }
