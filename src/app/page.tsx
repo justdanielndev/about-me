@@ -18,10 +18,15 @@ export default function Home() {
   let extrausernamecontent = "";
   let myemail = "dan@pluraldan.link";
   let myexpression = ":D"
-  if (truename === "zoe") {
-    myname = "Zoe";
+  let currentdomain = "pluraldan.link"
+  if (typeof window !== "undefined") {
+    currentdomain = window.location.hostname;
+  }
+  if (currentdomain === "zoe.negrenavarro.me" && !truename) {
+    window.location.href = window.location.href + `?truename=zoe`;
+  }
+  if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me") {
     mynamefortitle = "zoe";
-    mypronouns = "she/her/they";
     extrausernamecontent = " (yeah, deadname sadly. happens when you're not out to everyone :3)";
     myemail = "zoe@negrenavarro.me"
     basecolor = "text-rose-300";

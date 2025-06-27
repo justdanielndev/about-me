@@ -16,7 +16,14 @@ export default async function Blog({ searchParams }: BlogPageProps) {
   let myemail = "dan@pluraldan.link";
   let myexpression = ":D"
   
-  if (truename === "zoe") {
+  let currentdomain = "pluraldan.link"
+  if (typeof window !== "undefined") {
+    currentdomain = window.location.hostname;
+  }
+  if (currentdomain === "zoe.negrenavarro.me" && !truename) {
+    window.location.href = window.location.href + `?truename=zoe`;
+  }
+  if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me") {
     mynamefortitle = "zoe";
     extrausernamecontent = " (yeah, deadname sadly. happens when you're not out to everyone :3)";
     myemail = "zoe@negrenavarro.me"
@@ -32,8 +39,8 @@ export default async function Blog({ searchParams }: BlogPageProps) {
           <a href={`/${queryString}`} className="text-xl font-bold">about://{mynamefortitle}</a>
           <div className="flex gap-8 text-sm">
             <a href={`/${queryString}`} className={`hover:${basecolor} transition-colors`}>Home</a>
-            <a href={`/blog${queryString}`} className={`hover:${basecolor} transition-colors ${basecolor}`}>Blog</a>
-            <a href={`#${queryString}`} className={`hover:${basecolor} transition-colors`}>Network</a>
+            <a href={`#${queryString}`} className={`hover:${basecolor} transition-colors ${basecolor}`}>Blog</a>
+            <a href={`/network${queryString}`} className={`hover:${basecolor} transition-colors`}>Network</a>
             <a href={`#${queryString}`} className={`hover:${basecolor} transition-colors`}>???</a>
           </div>
         </nav>

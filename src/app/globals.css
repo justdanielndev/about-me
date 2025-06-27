@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-cascadia-code);
   --font-mono: var(--font-cascadia-code);
+  --font-serif: var(--font-cascadia-code);
 }
 
 body {

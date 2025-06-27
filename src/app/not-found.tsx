@@ -12,7 +12,14 @@ export default function NotFound() {
   let mynamefortitle = "dan";
   let myexpression = ":D";
   
-  if (truename === "zoe") {
+  let currentdomain = "pluraldan.link"
+  if (typeof window !== "undefined") {
+    currentdomain = window.location.hostname;
+  }
+  if (currentdomain === "zoe.negrenavarro.me" && !truename) {
+    window.location.href = window.location.href + `?truename=zoe`;
+  }
+  if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me") {
     mynamefortitle = "zoe";
     basecolor = "text-rose-300";
     myexpression = ":3";
@@ -26,7 +33,7 @@ export default function NotFound() {
           <div className="flex gap-8 text-sm">
             <a href={`/${queryString}`} className={`hover:${basecolor} transition-colors`}>Home</a>
             <a href={`/blog${queryString}`} className={`hover:${basecolor} transition-colors`}>Blog</a>
-            <a href={`#${queryString}`} className={`hover:${basecolor} transition-colors`}>Network</a>
+            <a href={`/network${queryString}`} className={`hover:${basecolor} transition-colors`}>Network</a>
             <a href={`#${queryString}`} className={`hover:${basecolor} transition-colors`}>???</a>
           </div>
         </nav>
