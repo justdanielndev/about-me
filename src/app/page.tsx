@@ -163,7 +163,7 @@ export default function Home() {
           <ul className="space-y-2">
             <li>
                 {mynamefortitle === "dan" ? (
-                <><strong>GitHub:</strong> <a href="#" className={`${basecolor} hover:underline`}>justdanielndev</a>{extrausernamecontent}</>
+                <><strong>GitHub:</strong> <a href="https://github.com/justdanielndev" className={`${basecolor} hover:underline`}>justdanielndev</a>{extrausernamecontent}</>
                 ) : (
                 <span>GitHub: <span className={`${basecolor} cursor-default`}>soon (the fking deadname sucks)</span></span>
                 )}
