@@ -60,6 +60,7 @@ export function getNetworkItemById(id: string): NetworkItem | null {
       description: data.description || '',
       content,
       type: data.type || '???',
+      order: data.order || '0',
     };
   } catch (error) {
     console.error(`Error reading network item ${id}:`, error);
