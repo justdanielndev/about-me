@@ -39,9 +39,10 @@ export default async function Network({ searchParams }: NetworkPageProps) {
           <a href={`/${queryString}`} className="text-xl font-bold">about://{mynamefortitle}</a>
           <div className="flex gap-8 text-sm">
             <a href={`/${queryString}`} className={`hover:${basecolor} transition-colors`}>Home</a>
+            <a href={`/about${queryString}`} className={`hover:${basecolor} transition-colors`}>About</a>
             <a href={`/blog${queryString}`} className={`hover:${basecolor} transition-colors`}>Blog</a>
             <a href={`#${queryString}`} className={`hover:${basecolor} transition-colors ${basecolor}`}>Network</a>
-            <a href={`#${queryString}`} className={`hover:${basecolor} transition-colors`}>???</a>
+            <a href={`/void${queryString}`} className={`hover:${basecolor} transition-colors`}>???</a>
           </div>
         </nav>
       </header>

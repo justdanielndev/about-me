@@ -39,9 +39,10 @@ export default async function Blog({ searchParams }: BlogPageProps) {
           <a href={`/${queryString}`} className="text-xl font-bold">about://{mynamefortitle}</a>
           <div className="flex gap-8 text-sm">
             <a href={`/${queryString}`} className={`hover:${basecolor} transition-colors`}>Home</a>
+            <a href={`/about${queryString}`} className={`hover:${basecolor} transition-colors`}>About</a>
             <a href={`#${queryString}`} className={`hover:${basecolor} transition-colors ${basecolor}`}>Blog</a>
             <a href={`/network${queryString}`} className={`hover:${basecolor} transition-colors`}>Network</a>
-            <a href={`#${queryString}`} className={`hover:${basecolor} transition-colors`}>???</a>
+            <a href={`/void${queryString}`} className={`hover:${basecolor} transition-colors`}>???</a>
           </div>
         </nav>
       </header>

@@ -118,7 +118,7 @@ export default function Home() {
             <a href={`/about${queryString}`} className={`hover:${basecolor} transition-colors`}>About</a>
             <a href={`/blog${queryString}`} className={`hover:${basecolor} transition-colors`}>Blog</a>
             <a href={`/network${queryString}`} className={`hover:${basecolor} transition-colors`}>Network</a>
-            <a href="#" className={`hover:${basecolor} transition-colors`}>???</a>
+            <a href={`/void${queryString}`} className={`hover:${basecolor} transition-colors`}>???</a>
           </div>
         </nav>
       </header>
