@@ -22,10 +22,10 @@ function HomeContent() {
   if (typeof window !== "undefined") {
     currentdomain = window.location.hostname;
   }
-  if (currentdomain === "zoe.negrenavarro.me" && !truename) {
+  if ((currentdomain === "zoe.negrenavarro.me" || currentdomain === "isitzoe.dev") && !truename) {
     window.location.href = window.location.href + `?truename=zoe`;
   }
-  if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me") {
+  if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me" || currentdomain === "isitzoe.dev") {
     mynamefortitle = "zoe";
     extrausernamecontent = " (yeah, deadname sadly. happens when you're not out to everyone :3)";
     myemail = "zoe@negrenavarro.me"

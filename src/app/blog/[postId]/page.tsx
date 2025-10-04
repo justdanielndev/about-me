@@ -26,10 +26,10 @@ export default async function BlogPost({ params, searchParams }: BlogPageProps) 
     if (typeof window !== "undefined") {
         currentdomain = window.location.hostname;
     }
-    if (currentdomain === "zoe.negrenavarro.me" && !truename) {
+    if ((currentdomain === "zoe.negrenavarro.me" || currentdomain === "isitzoe.dev") && !truename) {
     window.location.href = window.location.href + `?truename=zoe`;
     }
-    if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me") {
+    if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me" || currentdomain === "isitzoe.dev") {
         mynamefortitle = "zoe";
         basecolor = "text-rose-300";
     }
