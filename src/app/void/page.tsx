@@ -15,7 +15,7 @@ const voidContent = [
     content: "Is god real? I don't know, duh. Just ask him, here's his phone number: +00 000000001.",
   },
   {
-    content: "My philosophy in life? Be gay, do crimes (joking on the second part :/)",
+    content: "My philosophy in life? Be gay, do crimes (joking on the \"do crimes\" part :/)",
   },
   {
     content: "Help... I've been trapped here for... I don't know how long... Please don't let them hurt me... It's... very cold in here...",
