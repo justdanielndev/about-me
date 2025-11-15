@@ -33,17 +33,7 @@ function AboutContent() {
         myemail = "zoe@negrenavarro.me"
         basecolor = "text-rose-300";
         myexpression = ":3";
-        extracontent = (
-            <>
-                <br />
-                <br />
-                <span className="text-rose-300">
-                    And, putting this up today as a 28th of June thing (though you'll probably see this later, whoever you are),
-                </span>
-                    <br />
-                    a nice secret for you! Some flags: 🩷💛🩵 (probably already knew this of me, in this case it refers to both panromantic and pansexual if you didn't know), and, finally... 🏳️‍⚧️ (guess)! Yeah, best way to come out, huh?
-            </>
-        );
+        extracontent = ();
     }
     let thisurl = "https://negrenavarro.me";
 
@@ -64,17 +54,16 @@ function AboutContent() {
                     <p className="text-lg mb-8">
                         Hello again! So... you want to know things about me, right? Well...
                         <br />
-                        I'm a student that loves coding, writing, and overall anything that involves creativity and technology. I'm a member of <a href="https://hackclub.com" className={`${basecolor} hover:underline`}>Hack Club</a>, and I spend most of my day (gotta sleep, study and eat, so not the whole day {myexpression}) working on... Well, depends on the day XD.
+                        I'm a student that loves coding, writing, and overall anything that involves creativity and technology. I'm a member of <a href="https://hackclub.com" className={`${basecolor} hover:underline`}>Hack Club</a> and Founder, Director and CEO of <a href="https://nixentertainment.com" className={`${basecolor} hover:underline`}>Nix Entertainment</a> and I spend most of my day (gotta sleep, study and eat, so not the whole day {myexpression}) working on... Well, lots of projects.
                         <br />
                         <br />
-                        As for my setup, I have a <span className={`${basecolor}`}>Pixel 9 Pro XL</span> as my daily driver phone, a <span className={`${basecolor}`}>Macbook Air 13" (M2, 2024)</span> as my main PC and a <span className={`${basecolor}`}>Raspberry Pi 5</span> as my server/NAS.
+                        As for my setup, I have a <span className={`${basecolor}`}>Pixel 9 Pro XL</span> as my daily driver phone, a <span className={`${basecolor}`}>Macbook Air 13" (M2, 2024)</span> as my main "PC" and a <span className={`${basecolor}`}>custom made AMD Proxmox server</span> as my server and one of my NASes.
                         <br />
                         <br />
                         The main apps I use... well, we've got <a href="https://code.visualstudio.com/" className={`${basecolor} hover:underline`}>VS Code</a> for all my programming, <a href="https://obsidian.md/" className={`${basecolor} hover:underline`}>Obsidian</a> for my notes (primarily for my animated series), <a href="https://www.figma.com/" className={`${basecolor} hover:underline`}>Figma</a> for design, and <a href="https://slack.com/" className={`${basecolor} hover:underline`}>Slack</a> and <a href="https://www.whatsapp.com/" className={`${basecolor} hover:underline`}>WhatsApp</a> (yeah, sadly I need to use it to communicate with close people) for communication.
                         <br />
                         <br />
-                        And what else can I say? Uh... I use JS for 99% of the things I do :3 (JS supremacy lets gooooo), love nice UI/UX design (yeah, I'm always following the latest design trends), and I'm always looking for new projects to work on! Have ideas? Let me know! Not on email though, the challenge is to find me on Slack or Discord.
-                        {extracontent}
+                        And what else can I say? Uh... I use JS for 99% of the things I do {myexpression} (JS supremacy), love nice UI/UX design (yeah, I'm always following the latest design trends), and I'm always looking for new projects to work on! If you ever see me out there, feel free to let me know any idea you have!
                     </p>
                 </section>
             </main>
