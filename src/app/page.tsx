@@ -12,7 +12,7 @@ function HomeContent() {
   const queryString = truename ? `?truename=${truename}` : '';
 
   let basecolor = "text-blue-300";
-  let myname = "Dan";
+  let myname = "Daniel Negre";
   let mynamefortitle = "dan";
   let mypronouns = "they/he";
   let extrausernamecontent = "";
@@ -74,11 +74,11 @@ function HomeContent() {
       <main className="px-8 py-12 max-w-4xl mx-auto">
         <section className="mb-12">
           <p className="text-lg mb-8">
-            Hey {myexpression} I'm <span className={`${basecolor}`}>{myname}</span> ({mypronouns}) and uh... I do stuff! I research about how we work (humans, of course... or are you an AI? ಠಿ_ಠ), code lots of projects and try to make people's lives better with what I do!
+            Hey {myexpression} I'm <span className={`${basecolor}`}>{myname}</span> ({mypronouns})! I'm a director, writer, developer... Overall, I make projects that are designed improve people's lives.
 
             <br />
             <br />
-          Oh, you want examples... Hm... I built <a href="https://soundchestai.tech/" className={`${basecolor} hover:underline`}>SoundChestAI</a> for EduCaixa's The Challenge (and went to the finals!), started an <a href="https://nixmedia.studio" className={`${basecolor} hover:underline`}>animation group</a>, and more! (check <a href={`/network${queryString}`} className={`${basecolor} hover:underline`}>Network</a> for all my projects!)
+          Oh, you want examples... Hm... I built <a href="https://soundchestai.tech/" className={`${basecolor} hover:underline`}>SoundChestAI</a> for EduCaixa's The Challenge (and won my ticket to the finals!), started a <a href="https://nixentertainment.com" className={`${basecolor} hover:underline`}>media group</a> (which I'm really proud of, you should check it out), and more! (check my <a href={`/network${queryString}`} className={`${basecolor} hover:underline`}>Network</a> for all my projects!)
           </p>
         </section>
 
@@ -91,8 +91,8 @@ function HomeContent() {
               <div className="flex items-center border border-gray-600 rounded-lg p-4">
               <div>
                 <h3 className="font-bold">CURRENT PROJECT</h3>
-                <a href={thisurl} className={`${basecolor} hover:underline`}>this site!</a>
-                <p className="text-gray-400 text-sm italic">Does it look cool? Wanted to renew my portfolio for a while {myexpression}</p>
+                <a href="https://nixentertainment.com" className={`${basecolor} hover:underline`}>Nix Entertainment</a>
+                <p className="text-gray-400 text-sm italic">Working on the new site, as well as Shadowborne Chronicles {myexpression}</p>
               </div>
               </div>
               <div className="flex items-center border border-gray-600 rounded-lg p-4">
@@ -113,11 +113,18 @@ function HomeContent() {
                 {mynamefortitle === "dan" ? (
                 <><strong>GitHub:</strong> <a href="https://github.com/justdanielndev" className={`${basecolor} hover:underline`}>justdanielndev</a>{extrausernamecontent}</>
                 ) : (
-                <span>GitHub: <span className={`${basecolor} cursor-default`}>soon (the fking deadname sucks)</span></span>
+                <><strong>GitHub:</strong> <a href="https://github.com/justdanielndev" className={`${basecolor} hover:underline`}>justdanielndev</a> (the deadname sucks help)</span></>
                 )}
             </li>
             <li>
               <strong className="pr-2">Email:</strong> <a href={`mailto:${myemail}`} className={`${basecolor} hover:underline`}>{myemail}</a>
+            </li>
+            <li>
+                {mynamefortitle === "dan" ? (
+                <><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/daniel-negre-1a0748397/" className={`${basecolor} hover:underline`}>click here to open!</a>{extrausernamecontent}</>
+                ) : (
+                <><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/daniel-negre-1a0748397/" className={`${basecolor} hover:underline`}>click here to open!</a> (the deadname sucks help)</span></>
+                )}
             </li>
           </ul>
         </section>
