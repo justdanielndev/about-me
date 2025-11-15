@@ -33,7 +33,7 @@ function AboutContent() {
         myemail = "zoe@negrenavarro.me"
         basecolor = "text-rose-300";
         myexpression = ":3";
-        extracontent = ();
+        extracontent = (<></>);
     }
     let thisurl = "https://negrenavarro.me";
 

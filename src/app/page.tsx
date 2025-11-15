@@ -113,7 +113,7 @@ function HomeContent() {
                 {mynamefortitle === "dan" ? (
                 <><strong>GitHub:</strong> <a href="https://github.com/justdanielndev" className={`${basecolor} hover:underline`}>justdanielndev</a>{extrausernamecontent}</>
                 ) : (
-                <><strong>GitHub:</strong> <a href="https://github.com/justdanielndev" className={`${basecolor} hover:underline`}>justdanielndev</a> (the deadname sucks help)</span></>
+                <><strong>GitHub:</strong> <a href="https://github.com/justdanielndev" className={`${basecolor} hover:underline`}>justdanielndev</a> (the deadname sucks help)</>
                 )}
             </li>
             <li>
@@ -123,7 +123,7 @@ function HomeContent() {
                 {mynamefortitle === "dan" ? (
                 <><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/daniel-negre-1a0748397/" className={`${basecolor} hover:underline`}>click here to open!</a>{extrausernamecontent}</>
                 ) : (
-                <><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/daniel-negre-1a0748397/" className={`${basecolor} hover:underline`}>click here to open!</a> (the deadname sucks help)</span></>
+                <><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/daniel-negre-1a0748397/" className={`${basecolor} hover:underline`}>click here to open!</a> (again, deadname sucks)</>
                 )}
             </li>
           </ul>
