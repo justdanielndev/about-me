@@ -17,8 +17,8 @@ const cascadiaCode = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "about://me",
-  description: "My personal space on the vast, empty, AI-full web.",
+  title: "about://me (Daniel Negre's Portfolio)",
+  description: "My small, cozy personal space on the vast, empty web.",
 };
 
 export default function RootLayout({
