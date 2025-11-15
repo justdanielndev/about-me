@@ -43,7 +43,7 @@ function NotFoundContent() {
             This is not the page you're looking for...
           </p>
           <p className="text-gray-400 mb-8">
-            This page either doesn't exist, has a mistyped URL slug, or maybe I forgot to build it! Or it could be that an unknown interdimensional entity has gobbled it up... Sounds right to me!
+            This page either doesn't exist, has a mistyped URL slug, or maybe I forgot to build it! Or Umbriel just took it with him and left... Sounds right to me!
           </p>
         </div>
       </main>
