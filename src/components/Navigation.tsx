@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import GlitchText from './GlitchText';
 
 interface NavigationProps {
   mynamefortitle: string;
@@ -23,9 +24,11 @@ export default function Navigation({ mynamefortitle, basecolor, queryString, cur
   return (
     <header className="px-8 py-6">
       <nav className="flex justify-between items-center max-w-6xl mx-auto">
-        <a href={`/${queryString}`} className="text-xl font-bold">
-          about://{mynamefortitle}
-        </a>
+        <GlitchText 
+          text={`about://${mynamefortitle}`} 
+          href={`/${queryString}`} 
+          className="text-xl font-bold" 
+        />
 
         <button
           className="md:hidden flex flex-col justify-center items-center w-8 h-8"
@@ -64,9 +67,11 @@ export default function Navigation({ mynamefortitle, basecolor, queryString, cur
           <div className="fixed inset-0 bg-gray-900 bg-opacity-95 z-50 md:hidden">
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center px-8 py-6">
-                <a href={`/${queryString}`} className="text-xl font-bold">
-                  about://{mynamefortitle}
-                </a>
+                <GlitchText 
+                  text={`about://${mynamefortitle}`} 
+                  href={`/${queryString}`} 
+                  className="text-xl font-bold" 
+                />
                 <button
                   onClick={() => setIsMenuOpen(false)}
                   className="flex justify-center items-center w-8 h-8"

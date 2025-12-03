@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Cursor from "@/components/Cursor";
 
 const cascadiaCode = localFont({
   src: [
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${cascadiaCode.variable} antialiased`}
       >
+        <Cursor />
         {children}
       </body>
     </html>

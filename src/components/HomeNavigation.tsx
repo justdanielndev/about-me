@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import GlitchText from './GlitchText';
 
 interface HomeNavigationProps {
   mynamefortitle: string;
@@ -77,9 +78,11 @@ export default function HomeNavigation({ mynamefortitle, basecolor, queryString,
   return (
     <header className="px-8 py-6">
       <nav className="flex justify-between items-center max-w-6xl mx-auto">
-        <div className="text-xl font-bold cursor-default">
-          about://{mynamefortitle}
-        </div>
+        <GlitchText 
+          text={`about://${mynamefortitle}`} 
+          className="text-xl font-bold" 
+          data-cursor-hover
+        />
 
         <button
           className="md:hidden flex flex-col justify-center items-center w-8 h-8"
@@ -126,9 +129,11 @@ export default function HomeNavigation({ mynamefortitle, basecolor, queryString,
           <div className="fixed inset-0 bg-gray-900 bg-opacity-95 z-50 md:hidden">
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center px-8 py-6">
-                <div className="text-xl font-bold cursor-default">
-                  about://{mynamefortitle}
-                </div>
+                <GlitchText 
+                  text={`about://${mynamefortitle}`} 
+                  className="text-xl font-bold" 
+                  data-cursor-hover
+                />
                 <button
                   onClick={() => setIsMenuOpen(false)}
                   className="flex justify-center items-center w-8 h-8"

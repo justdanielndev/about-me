@@ -18,3 +18,9 @@ body {
   color: var(--foreground);
   font-family: var(--font-cascadia-code), monospace;
 }
+
+@media (pointer: fine) {
+  body, a, button, [role="button"] {
+    cursor: none !important;
+  }
+}

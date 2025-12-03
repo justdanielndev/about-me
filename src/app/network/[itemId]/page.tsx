@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getNetworkItemBySlug } from '@/lib/network';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Navigation from '@/components/Navigation';
+import { headers } from 'next/headers';
 
 interface NetworkPageProps {
     params: Promise<{ itemId: string }>;
@@ -22,14 +23,14 @@ export default async function NetworkItem({ params, searchParams }: NetworkPageP
     let basecolor = "text-blue-300";
     let mynamefortitle = "dan";
 
-    let currentdomain = "negrenavarro.me"
-    if (typeof window !== "undefined") {
-        currentdomain = window.location.hostname;
+    const headersList = await headers();
+    const host = headersList.get('host') || "";
+    let currentdomain = "negrenavarro.me";
+    if (host.includes("zoe.negrenavarro.me") || host.includes("isitzoe.dev")) {
+        currentdomain = "zoe.negrenavarro.me";
     }
-    if ((currentdomain === "zoe.negrenavarro.me" || currentdomain === "isitzoe.dev") && !truename) {
-    window.location.href = window.location.href + `?truename=zoe`;
-    }
-    if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me" || currentdomain === "isitzoe.dev") {
+
+    if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me") {
         mynamefortitle = "zoe";
         basecolor = "text-rose-300";
     }
