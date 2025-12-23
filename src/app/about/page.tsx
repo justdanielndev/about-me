@@ -18,14 +18,14 @@ function AboutContent() {
     let myemail = "daniel@negrenavarro.me";
     let myexpression = ":D";
     let currentdomain = "negrenavarro.me";
-    let extracontent = <div></div>;
+    let extracontent = <></>;
     if (typeof window !== "undefined") {
         currentdomain = window.location.hostname;
     }
-    if ((currentdomain === "zoe.negrenavarro.me" || currentdomain === "isitzoe.dev") && !truename) {
+    if ((currentdomain === "zoe.negrenavarro.me" || currentdomain === "isitzoe.dev" || currentdomain === "zoe.rocks") && !truename) {
         window.location.href = window.location.href + `?truename=zoe`;
     }
-    if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me" || currentdomain === "isitzoe.dev") {
+    if (truename === "zoe" || currentdomain === "zoe.negrenavarro.me" || currentdomain === "isitzoe.dev" || currentdomain === "zoe.rocks") {
         mynamefortitle = "zoe";
         myname = "Zoe";
         mypronouns = "she/they";
