@@ -91,8 +91,8 @@ function HomeContent() {
               <div className="flex items-center border border-gray-600 rounded-lg p-4">
               <div>
                 <h3 className="font-bold">CURRENT PROJECT</h3>
-                <a href="https://nixentertainment.com" className={`${basecolor} hover:underline`}>Nix Entertainment</a>
-                <p className="text-gray-400 text-sm italic">Working on the new site, as well as Shadowborne Chronicles {myexpression}</p>
+                <a href="https://nixentertainment.com/shadowborne-chronicles" className={`${basecolor} hover:underline`}>Shadowborne Chronicles</a>
+                <p className="text-gray-400 text-sm italic">Working on an amazing brand new indie animated series! Go check it out {myexpression}</p>
               </div>
               </div>
               <div className="flex items-center border border-gray-600 rounded-lg p-4">
