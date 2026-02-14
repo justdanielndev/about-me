@@ -12,7 +12,7 @@ function HomeContent() {
   const queryString = truename ? `?truename=${truename}` : '';
 
   let basecolor = "text-blue-300";
-  let myname = "Daniel Negre";
+  let myname = "Daniel de Negre";
   let mynamefortitle = "dan";
   let mypronouns = "they/he";
   let extrausernamecontent = "";
@@ -121,9 +121,9 @@ function HomeContent() {
             </li>
             <li>
                 {mynamefortitle === "dan" ? (
-                <><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/daniel-negre-1a0748397/" className={`${basecolor} hover:underline`}>click here to open!</a>{extrausernamecontent}</>
+                <><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/daniel-negre/" className={`${basecolor} hover:underline`}>click here to open!</a>{extrausernamecontent}</>
                 ) : (
-                <><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/daniel-negre-1a0748397/" className={`${basecolor} hover:underline`}>click here to open!</a> (again, deadname sucks)</>
+                <><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/daniel-negre/" className={`${basecolor} hover:underline`}>click here to open!</a> (again, deadname sucks)</>
                 )}
             </li>
           </ul>
