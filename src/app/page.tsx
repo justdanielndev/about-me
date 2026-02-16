@@ -12,7 +12,7 @@ function HomeContent() {
   const queryString = truename ? `?truename=${truename}` : '';
 
   let basecolor = "text-blue-300";
-  let myname = "Daniel de Negre";
+  let myname = "Daniel Negre";
   let mynamefortitle = "dan";
   let mypronouns = "they/he";
   let extrausernamecontent = "";
